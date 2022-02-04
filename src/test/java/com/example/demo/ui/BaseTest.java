@@ -20,8 +20,11 @@ public class BaseTest {
 	    @Parameters(value={"browser"})
 	    public void setup (String browser) throws MalformedURLException {
 	        //Set Browser to ThreadLocalMap
+			//String gridURL = System.getProperty("GRID_URL");
+			String gridURL = "http://3.83.92.200:4444";
+			System.out.println("Using Grid URL: " + gridURL);
 	        driver.set(new RemoteWebDriver(
-	        		new URL(System.getProperty("GRID_URL")+"/wd/hub"),
+	        		new URL(gridURL + "/wd/hub"),
 					capabilityFactory.getCapabilities(browser)));
 	    }
 	 
