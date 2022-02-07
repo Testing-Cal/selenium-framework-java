@@ -9,7 +9,7 @@ public class ChromeTest extends BaseTest {
 	    @Test
 	    public void GSAMPLE1() {
 	        System.out.println("Test Started! " );
-			String siteURL = "http://54.157.39.166:3015/myapi";
+			String siteURL = "http://52.91.78.138:3015/api";
 			System.out.println("Using site URL: " + siteURL);
 	        getDriver().navigate().to(System.getProperty("SITE_URL"));
 	        System.out.println("Test's Page title is: " + getDriver().getTitle());
