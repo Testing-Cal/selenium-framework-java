@@ -9,7 +9,7 @@ public class ChromeTest extends BaseTest {
 	    @Test
 	    public void GSAMPLE1() throws Exception {
 	        System.out.println("Test Started! " );
-			String siteURL = "http://18.212.183.3:3015/api/";
+			String siteURL = "http://54.209.235.57:3015/api/";
 			System.out.println("Using site URL: " + siteURL);
 			String titileToBeCompared = "React 17.0.2";
 			System.out.println("Site title to be compared: " + titileToBeCompared);
