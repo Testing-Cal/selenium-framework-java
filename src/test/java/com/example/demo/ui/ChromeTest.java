@@ -7,14 +7,18 @@ import org.testng.annotations.Test;
 public class ChromeTest extends BaseTest {
 	
 	    @Test
-	    public void GSAMPLE1() {
-	        System.out.println("Test Started! " );
-			String siteURL = "http://122.12.12.12:3015/myapi";
+	    public void GSAMPLE1() throws InterruptedException {
+			System.out.println("Test Started! " );
+			String siteURL = System.getProperty("SITE_URL");
 			System.out.println("Using site URL: " + siteURL);
-	        getDriver().navigate().to(System.getProperty("SITE_URL"));
-	        System.out.println("Test's Page title is: " + getDriver().getTitle());
-	        Assert.assertEquals(getDriver().getTitle(), "Google");
-	        System.out.println("Test Ended! ");
-	    }
+			String titileToBeCompared = "React 17.0.2";
+			System.out.println("Site title to be compared: " + titileToBeCompared);
+			getDriver().navigate().to(siteURL);
+			System.out.println("Test's Page title is: " + getDriver().getTitle());
+			Assert.assertEquals(getDriver().getTitle(), titileToBeCompared);
+			System.out.println("Test Complete! ");
+			Thread.sleep(5000);
+
+		}
 	
 }
