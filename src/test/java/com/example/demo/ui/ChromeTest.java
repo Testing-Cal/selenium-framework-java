@@ -10,6 +10,11 @@ public class ChromeTest extends BaseTest {
 	    public void GSAMPLE1() throws InterruptedException {
 			System.out.println("Test Started! " );
 			String siteURL = System.getProperty("SITE_URL");
+			if (siteURL == null) {
+				// Pass the Site Under Test URL here in below format
+				// http://209.12.12.12:3000/api/
+				siteURL = "http://<site-under-test-url>:<site-port>/<context-path>/";
+			}
 			System.out.println("Using site URL: " + siteURL);
 			String titileToBeCompared = "Angular 12";
 			System.out.println("Site title to be compared: " + titileToBeCompared);
