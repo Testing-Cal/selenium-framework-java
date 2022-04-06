@@ -16,7 +16,7 @@ public class ChromeTest extends BaseTest {
 				siteURL = "http://<site-under-test-url>:<site-port>/<context-path>/";
 			}
 			System.out.println("Using site URL: " + siteURL);
-			String titileToBeCompared = "Angular 12";
+			String titileToBeCompared = "React 17.0.2";
 			System.out.println("Site title to be compared: " + titileToBeCompared);
 			Thread.sleep(10000);
 			getDriver().navigate().to(siteURL);
