@@ -9,7 +9,8 @@ public class ChromeTest extends BaseTest {
 	    @Test
 	    public void GSAMPLE1() throws InterruptedException {
 			System.out.println("Test Started! " );
-			String siteURL = "http://20.232.193.80:3015/api/";
+			//String siteURL = "http://20.232.193.80:3015/api/";
+			String siteURL = System.getProperty("SITE_URL");
 			if (siteURL == null) {
 				// Pass the Site Under Test URL here in below format
 				// http://209.12.12.12:3000/api/
