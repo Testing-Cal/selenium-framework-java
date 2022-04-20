@@ -8,27 +8,27 @@ import org.testng.annotations.Test;
 
 
 public class ChromeTest extends BaseTest {
-	
+
 	@Test
-	public void GSAMPLE1() throws InterruptedException {
-			System.out.println("Test Started! ");
-			//String siteURL = "http://20.232.193.80:3015/api/";
-			String siteURL = System.getProperty("SITE_URL");
-			if (siteURL == null) {
-				// Pass the Site Under Test URL here in below format
-				// http://209.12.12.12:3000/api/
-				siteURL = "http://<site-under-test-url>:<site-port>/<context-path>/";
-			}
-			System.out.println("Using site URL: " + siteURL);
-			//String titileToBeCompared = "React 17.0.2";
-			String titileToBeCompared = "Angular 12";
-			System.out.println("Site title to be compared: " + titileToBeCompared);
-			Thread.sleep(10000);
-			getDriver().navigate().to(siteURL);
-			System.out.println("Test's Page title is: " + getDriver().getTitle());
-			Assert.assertEquals(getDriver().getTitle(), titileToBeCompared);
-			System.out.println("Test Complete! ");
-			Thread.sleep(5000);
+	public void W() throws InterruptedException {
+		System.out.println("Test Started! ");
+		//String siteURL = "http://20.232.193.80:3015/api/";
+		String siteURL = System.getProperty("SITE_URL");
+		if (siteURL == null) {
+			// Pass the Site Under Test URL here in below format
+			// http://209.12.12.12:3000/api/
+			siteURL = "http://<site-under-test-url>:<site-port>/<context-path>/";
+		}
+		System.out.println("Using site URL: " + siteURL);
+		//String titileToBeCompared = "React 17.0.2";
+		String titileToBeCompared = "Angular 12";
+		System.out.println("Site title to be compared: " + titileToBeCompared);
+		Thread.sleep(10000);
+		getDriver().navigate().to(siteURL);
+		System.out.println("Test's Page title is: " + getDriver().getTitle());
+		Assert.assertEquals(getDriver().getTitle(), titileToBeCompared);
+		System.out.println("Test Complete Sagar! ");
+		Thread.sleep(5000);
 	}
 
 	@Test
@@ -83,7 +83,7 @@ public class ChromeTest extends BaseTest {
 
 	@Test
 	public void GSAMPLE12() {
-		//int a =1/0;
+		int a =1/0;
 	}
 
 	@Test
