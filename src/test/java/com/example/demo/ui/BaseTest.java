@@ -22,7 +22,7 @@ public class BaseTest {
 	        //Set Browser to ThreadLocalMap
 			//String gridURL = System.getProperty("GRID_URL");
 			//String gridURL = "http://2ac5524bd47c4b98b353cdc85d832a3c-1187538867.us-east-1.elb.amazonaws.com:4444";
-			String gridURL = "http://54.162.115.64:4444/";
+			String gridURL = "http://44.192.12.179:4444/";
 			System.out.println("Using Grid URL: " + gridURL);
 	        driver.set(new RemoteWebDriver(
 	        		new URL(gridURL + "/wd/hub"),
