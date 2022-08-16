@@ -63,27 +63,27 @@ public class ChromeTest extends BaseTest {
 
 	@Test
 	public void GSAMPLE8()  {
-		Assert.assertEquals("sagar1","sagar");
+		Assert.assertEquals("sagar","sagar");
 	}
 
 	@Test
 	public void GSAMPLE9()  {
-		Assert.assertEquals("sagar1","sagar");
+		Assert.assertEquals("sagar","sagar");
 	}
 
 	@Test
 	public void GSAMPLE10()  {
-		Assert.assertEquals("sagar1","sagar");
+		Assert.assertEquals("sagar","sagar");
 	}
 
 	@Test
 	public void GSAMPLE11() {
-		Assert.assertEquals("sagar1","sagar");
+		Assert.assertEquals("sagar","sagar");
 	}
 
 	@Test
 	public void GSAMPLE12() {
-		int a =1/0;
+		int a =1/1;
 	}
 
 	@Test
@@ -93,7 +93,7 @@ public class ChromeTest extends BaseTest {
 
 	@Test
 	public void GSAMPLE14() {
-		Assert.assertEquals("sagar1","sagar");
+		Assert.assertEquals("sagar","sagar");
 	}
 
 	@Test
@@ -113,11 +113,11 @@ public class ChromeTest extends BaseTest {
 
 	@Test
 	public void GSAMPLE18() {
-		Assert.assertEquals("sagar1","sagar");
+		Assert.assertEquals("sagar","sagar");
 	}
 
 	@Test
 	public void GSAMPLE19() {
-		Assert.assertEquals("sagar1","sagar");
+		Assert.assertEquals("sagar","sagar");
 	}
 }
