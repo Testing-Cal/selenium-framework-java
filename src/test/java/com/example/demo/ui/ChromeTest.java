@@ -31,92 +31,92 @@ public class ChromeTest extends BaseTest {
 		Thread.sleep(5000);
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE2() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE3() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE4() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE5()  {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE6()  {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE7() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE8()  {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE9()  {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE10()  {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE11() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE12() {
 		int a =1/1;
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE13() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE14() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE15()	 {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE16() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE17() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE18() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	@Test
+	//@Test
 	public void GSAMPLE19() {
 		Assert.assertEquals("sagar","sagar");
 	}
