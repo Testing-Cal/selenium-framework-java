@@ -31,27 +31,27 @@ public class ChromeTest extends BaseTest {
 		Thread.sleep(5000);
 	}
 
-	//@Test
+	@Test
 	public void GSAMPLE2() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	//@Test
+	@Test
 	public void GSAMPLE3() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	//@Test
+	@Test
 	public void GSAMPLE4() {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	//@Test
+	@Test
 	public void GSAMPLE5()  {
 		Assert.assertEquals("sagar","sagar");
 	}
 
-	//@Test
+	@Test
 	public void GSAMPLE6()  {
 		Assert.assertEquals("sagar","sagar");
 	}
