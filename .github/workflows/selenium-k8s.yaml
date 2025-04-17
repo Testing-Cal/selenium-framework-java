@@ -23,7 +23,7 @@ jobs:
       - name: Initialization
         run: |
           sudo apt install yq -y 
-          JSON_STRING='${{ vars.CD_METADATA }}'
+          JSON_STRING='${{ vars.CI_METADATA }}'
 
           # push to collector
           echo "TENANT_ID=$(echo "$JSON_STRING" | jq -r '.general.tenant')" >> "$GITHUB_ENV"
