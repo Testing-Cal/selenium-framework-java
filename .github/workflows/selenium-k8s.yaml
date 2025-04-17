@@ -48,13 +48,6 @@ jobs:
           echo "ACTION=$(echo "$JSON_STRING" | jq -r '.general.action')" >> "$GITHUB_ENV"
           echo "K8S_SECRET_NAME=$(echo "$JSON_STRING" | jq -r '.general.artifactoryPasswordSecret' | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//' | cut -c1-253)" >> "$GITHUB_ENV"
 
-          #promotion workflow
-          echo "PROMOTE_SOURCE=$(echo "$JSON_STRING" | jq -r '.general.promoteSource')" >> "$GITHUB_ENV"
-          echo "PROMOTE_SOURCE_ARTIFACTORY_USER_SECRET=$(echo "$JSON_STRING" | jq -r '.general.promoteSourceArtifactoryUserSecret')" >> "$GITHUB_ENV"
-          echo "PROMOTE_SOURCE_ARTIFACTORY_PASSWORD_SECRET(echo "$JSON_STRING" | jq -r '.general.promoteSourceArtifactoryPasswordSecret')" >> "$GITHUB_ENV"
-          echo "PROMOTE_SOURCE_ARTIFACTORY_TYPE=$(echo "$JSON_STRING" | jq -r '.general.promoteSourceArtifactoryType')" >> "$GITHUB_ENV"
-          echo "PROMOTE_TAG=$(echo "$JSON_STRING" | jq -r '.general.promoteTag')" >> "$GITHUB_ENV"
-          echo "ROLLBACK_TAG=$(echo "$JSON_STRING" | jq -r '.general.rollbackTag')" >> "$GITHUB_ENV"
 
           echo "$JSON_STRING" | jq -r '.kubernetes' | yq --yaml-output > Helm.yaml
           #echo "$JSON_STRING" | jq -r '.kubernetes.vault' | yq  > Vault.yaml    
