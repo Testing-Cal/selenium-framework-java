@@ -85,13 +85,13 @@ jobs:
           docker run --rm  --user root -v "$HOME/.kube/config":"/.kube/config" -e KUBECONFIG="/.kube/config" -v "$GITHUB_WORKSPACE":/apps -v "$GITHUB_WORKSPACE"/helm:/root/.config/helm -v "$GITHUB_WORKSPACE"/helm-cache:/root/.cache/helm $HELM_IMAGE_VERSION repo update
           docker run --rm  --user root -v "$HOME/.kube/config":"/.kube/config" -e KUBECONFIG="/.kube/config" -v "$GITHUB_WORKSPACE":/apps -v "$GITHUB_WORKSPACE"/helm:/root/.config/helm -v "$GITHUB_WORKSPACE"/helm-cache:/root/.cache/helm $HELM_IMAGE_VERSION search repo docker-selenium --versions
           docker run --rm  --user root -v "$HOME/.kube/config":"/.kube/config" -e KUBECONFIG="/.kube/config" -v "$GITHUB_WORKSPACE":/apps -v "$GITHUB_WORKSPACE"/helm:/root/.config/helm -v "$GITHUB_WORKSPACE"/helm-cache:/root/.cache/helm $HELM_IMAGE_VERSION upgrade --install "$HELM_RELEASE_NAME" docker-selenium/selenium-grid --set isolateComponents=false --set hub.serviceType="$KUBE_SERVICE_TYPE" --set hub.serviceAnnotations."service\\.beta\\.kubernetes\\.io/aws-load-balancer-scheme"="internet-facing" --version 0.42.1 -n "$namespace_name"
-          sleep 120
+          sleep 20
 
           export temp_service_name="$HELM_RELEASE_NAME-selenium-hub"
 
 
           # get dns of svc
-          echo "REMOTE_DRIVER_HOST=$(kubectl get svc -n \"$namespace_name\" | grep \"$temp_service_name\" | awk '{print \$4}')" >> "$GITHUB_ENV"
+          echo "REMOTE_DRIVER_HOST=$(kubectl get svc \"$temp_service_name\" -n \"$namespace_name\" -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')" >> "$GITHUB_ENV"
 
 
       - name: Unit Test
